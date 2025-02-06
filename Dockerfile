@@ -8,7 +8,11 @@ RUN go install golang.org/x/tools/gopls@latest
 
 RUN set -ex && \
     apt update && \
-    apt install -y --no-install-recommends protobuf-compiler && \
+    apt install -y --no-install-recommends \
+        protobuf-compiler \
+        protoc-gen-go \
+        protoc-gen-go-grpc \
+        && \
     apt upgrade -y && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
