@@ -4,7 +4,8 @@ COPY ./.devcontainer/.bashrc ../../root/.bashrc
 
 RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-RUN go install golang.org/x/tools/gopls@latest
+RUN go install golang.org/x/tools/gopls@latest && \
+    go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
 
 RUN set -ex && \
     apt update && \
