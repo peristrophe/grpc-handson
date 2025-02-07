@@ -16,3 +16,5 @@ alias la='ls $LS_OPTIONS -lA'
 # alias rm='rm -i'
 # alias cp='cp -i'
 # alias mv='mv -i'
+
+PS1="\[\e[1;32m\]\u@\[\e[m\]\[\e[1;33m\]\h:\[\e[m\]\[\e[1;31m\]\W$ \[\e[m\]"
